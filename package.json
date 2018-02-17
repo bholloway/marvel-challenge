@@ -1,0 +1,24 @@
+{
+  "name": "marvel-challenge",
+  "version": "0.0.1",
+  "description": "Open ended demo app using developer.marvel.com",
+  "main": "index.js",
+  "repository": "https://github.com/bholloway/marvel-challenge.git",
+  "author": "bholloway",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^2.9.0"
+  },
+  "scripts": {
+    "lerna": "lerna",
+    "bootstrap": "yarn lerna run bootstrap",
+    "start": "yarn lerna run start",
+    "prettier": "yarn lerna run prettier",
+    "test": "yarn lerna run test",
+    "docker": "yarn lerna run docker"
+  }
+}

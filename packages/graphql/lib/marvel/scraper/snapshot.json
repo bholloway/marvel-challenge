@@ -1,0 +1,2217 @@
+{
+  "models": {
+    "Url": {
+      "type": "String",
+      "url": "String"
+    },
+    "Image": {
+      "path": "String",
+      "extension": "String"
+    },
+    "ComicDate": {
+      "type": "String",
+      "date": "String"
+    },
+    "CharacterDataContainer": {
+      "offset": "Int",
+      "limit": "Int",
+      "total": "Int",
+      "count": "Int",
+      "results": "[Character]"
+    },
+    "EventDataContainer": {
+      "offset": "Int",
+      "limit": "Int",
+      "total": "Int",
+      "count": "Int",
+      "results": "[Event]"
+    },
+    "ComicPrice": {
+      "type": "String",
+      "price": "Float"
+    },
+    "EventDataWrapper": {
+      "code": "Int",
+      "status": "String",
+      "copyright": "String",
+      "attributionText": "String",
+      "attributionHTML": "String",
+      "data": "EventDataContainer",
+      "etag": "String"
+    },
+    "Creator": {
+      "id": "Int",
+      "firstName": "String",
+      "middleName": "String",
+      "lastName": "String",
+      "suffix": "String",
+      "fullName": "String",
+      "modified": "String",
+      "resourceURI": "String",
+      "urls": "[Url]",
+      "thumbnail": "Image",
+      "series": "SeriesDataContainer",
+      "stories": "StoryDataContainer",
+      "comics": "ComicDataContainer",
+      "events": "EventDataContainer"
+    },
+    "Event": {
+      "id": "Int",
+      "title": "String",
+      "description": "String",
+      "resourceURI": "String",
+      "urls": "[Url]",
+      "modified": "String",
+      "start": "String",
+      "end": "String",
+      "thumbnail": "Image",
+      "comics": "ComicDataContainer",
+      "stories": "StoryDataContainer",
+      "series": "SeriesDataContainer",
+      "characters": "CharacterDataContainer",
+      "creators": "CreatorDataContainer",
+      "next": "Event",
+      "previous": "Event"
+    },
+    "ComicDataContainer": {
+      "offset": "Int",
+      "limit": "Int",
+      "total": "Int",
+      "count": "Int",
+      "results": "[Comic]"
+    },
+    "TextObject": {
+      "type": "String",
+      "language": "String",
+      "text": "String"
+    },
+    "CreatorDataWrapper": {
+      "code": "Int",
+      "status": "String",
+      "copyright": "String",
+      "attributionText": "String",
+      "attributionHTML": "String",
+      "data": "CreatorDataContainer",
+      "etag": "String"
+    },
+    "StoryDataWrapper": {
+      "code": "Int",
+      "status": "String",
+      "copyright": "String",
+      "attributionText": "String",
+      "attributionHTML": "String",
+      "data": "StoryDataContainer",
+      "etag": "String"
+    },
+    "Character": {
+      "id": "Int",
+      "name": "String",
+      "description": "String",
+      "modified": "String",
+      "resourceURI": "String",
+      "urls": "[Url]",
+      "thumbnail": "Image",
+      "comics": "ComicDataContainer",
+      "stories": "StoryDataContainer",
+      "events": "EventDataContainer",
+      "series": "SeriesDataContainer"
+    },
+    "CharacterDataWrapper": {
+      "code": "Int",
+      "status": "String",
+      "copyright": "String",
+      "attributionText": "String",
+      "attributionHTML": "String",
+      "data": "CharacterDataContainer",
+      "etag": "String"
+    },
+    "ComicDataWrapper": {
+      "code": "Int",
+      "status": "String",
+      "copyright": "String",
+      "attributionText": "String",
+      "attributionHTML": "String",
+      "data": "ComicDataContainer",
+      "etag": "String"
+    },
+    "Series": {
+      "id": "Int",
+      "title": "String",
+      "description": "String",
+      "resourceURI": "String",
+      "urls": "[Url]",
+      "startYear": "Int",
+      "endYear": "Int",
+      "rating": "String",
+      "modified": "String",
+      "thumbnail": "Image",
+      "comics": "ComicDataContainer",
+      "stories": "StoryDataContainer",
+      "events": "EventDataContainer",
+      "characters": "CharacterDataContainer",
+      "creators": "CreatorDataContainer",
+      "next": "Series",
+      "previous": "Series"
+    },
+    "SeriesDataWrapper": {
+      "code": "Int",
+      "status": "String",
+      "copyright": "String",
+      "attributionText": "String",
+      "attributionHTML": "String",
+      "data": "SeriesDataContainer",
+      "etag": "String"
+    },
+    "SeriesDataContainer": {
+      "offset": "Int",
+      "limit": "Int",
+      "total": "Int",
+      "count": "Int",
+      "results": "[Series]"
+    },
+    "StoryDataContainer": {
+      "offset": "Int",
+      "limit": "Int",
+      "total": "Int",
+      "count": "Int",
+      "results": "[Story]"
+    },
+    "Comic": {
+      "id": "Int",
+      "digitalId": "Int",
+      "title": "String",
+      "issueNumber": "Float",
+      "variantDescription": "String",
+      "description": "String",
+      "modified": "String",
+      "isbn": "String",
+      "upc": "String",
+      "diamondCode": "String",
+      "ean": "String",
+      "issn": "String",
+      "format": "String",
+      "pageCount": "Int",
+      "textObjects": "[TextObject]",
+      "resourceURI": "String",
+      "urls": "[Url]",
+      "series": "Series",
+      "variants": "ComicDataContainer",
+      "collections": "ComicDataContainer",
+      "collectedIssues": "ComicDataContainer",
+      "dates": "[ComicDate]",
+      "prices": "[ComicPrice]",
+      "thumbnail": "Image",
+      "images": "[Image]",
+      "creators": "CreatorDataContainer",
+      "characters": "CharacterDataContainer",
+      "stories": "StoryDataContainer",
+      "events": "EventDataContainer"
+    },
+    "CreatorDataContainer": {
+      "offset": "Int",
+      "limit": "Int",
+      "total": "Int",
+      "count": "Int",
+      "results": "[Creator]"
+    },
+    "Story": {
+      "id": "Int",
+      "title": "String",
+      "description": "String",
+      "resourceURI": "String",
+      "type": "String",
+      "modified": "String",
+      "thumbnail": "Image",
+      "comics": "ComicDataContainer",
+      "series": "SeriesDataContainer",
+      "events": "EventDataContainer",
+      "characters": "CharacterDataContainer",
+      "creators": "CreatorDataContainer",
+      "originalissue": "Comic"
+    }
+  },
+  "resources": [
+    {
+      "path": "/v1/public/characters",
+      "segments": [
+        "/v1/public/",
+        "characters"
+      ],
+      "description": "Fetches lists of characters.",
+      "query": {
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CharacterDataContainer"
+    },
+    {
+      "path": "/v1/public/characters/{characterId}",
+      "segments": [
+        "/v1/public/",
+        "characters",
+        "{characterId}"
+      ],
+      "description": "Fetches a single character by id.",
+      "query": {
+        "characterId": "Int"
+      },
+      "type": "CharacterDataContainer"
+    },
+    {
+      "path": "/v1/public/characters/{characterId}/comics",
+      "segments": [
+        "/v1/public/",
+        "characters",
+        "{characterId}",
+        "comics"
+      ],
+      "description": "Fetches lists of comics filtered by a character id.",
+      "query": {
+        "characterId": "Int",
+        "format": "String",
+        "formatType": "String",
+        "noVariants": "Boolean",
+        "dateDescriptor": "String",
+        "dateRange": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "issueNumber": "Int",
+        "diamondCode": "String",
+        "digitalId": "Int",
+        "upc": "String",
+        "isbn": "String",
+        "ean": "String",
+        "issn": "String",
+        "hasDigitalIssue": "Boolean",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "sharedAppearances": "Int",
+        "collaborators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/characters/{characterId}/events",
+      "segments": [
+        "/v1/public/",
+        "characters",
+        "{characterId}",
+        "events"
+      ],
+      "description": "Fetches lists of events filtered by a character id.",
+      "query": {
+        "characterId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "series": "Int",
+        "comics": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/characters/{characterId}/series",
+      "segments": [
+        "/v1/public/",
+        "characters",
+        "{characterId}",
+        "series"
+      ],
+      "description": "Fetches lists of series filtered by a character id.",
+      "query": {
+        "characterId": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "stories": "Int",
+        "events": "Int",
+        "creators": "Int",
+        "seriesType": "String",
+        "contains": "String",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "SeriesDataContainer"
+    },
+    {
+      "path": "/v1/public/characters/{characterId}/stories",
+      "segments": [
+        "/v1/public/",
+        "characters",
+        "{characterId}",
+        "stories"
+      ],
+      "description": "Fetches lists of stories filtered by a character id.",
+      "query": {
+        "characterId": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "creators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/comics",
+      "segments": [
+        "/v1/public/",
+        "comics"
+      ],
+      "description": "Fetches lists of comics.",
+      "query": {
+        "format": "String",
+        "formatType": "String",
+        "noVariants": "Boolean",
+        "dateDescriptor": "String",
+        "dateRange": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "issueNumber": "Int",
+        "diamondCode": "String",
+        "digitalId": "Int",
+        "upc": "String",
+        "isbn": "String",
+        "ean": "String",
+        "issn": "String",
+        "hasDigitalIssue": "Boolean",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "sharedAppearances": "Int",
+        "collaborators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/comics/{comicId}",
+      "segments": [
+        "/v1/public/",
+        "comics",
+        "{comicId}"
+      ],
+      "description": "Fetches a single comic by id.",
+      "query": {
+        "comicId": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/comics/{comicId}/characters",
+      "segments": [
+        "/v1/public/",
+        "comics",
+        "{comicId}",
+        "characters"
+      ],
+      "description": "Fetches lists of characters filtered by a comic id.",
+      "query": {
+        "comicId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CharacterDataContainer"
+    },
+    {
+      "path": "/v1/public/comics/{comicId}/creators",
+      "segments": [
+        "/v1/public/",
+        "comics",
+        "{comicId}",
+        "creators"
+      ],
+      "description": "Fetches lists of creators filtered by a comic id.",
+      "query": {
+        "comicId": "Int",
+        "firstName": "String",
+        "middleName": "String",
+        "lastName": "String",
+        "suffix": "String",
+        "nameStartsWith": "String",
+        "firstNameStartsWith": "String",
+        "middleNameStartsWith": "String",
+        "lastNameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CreatorDataContainer"
+    },
+    {
+      "path": "/v1/public/comics/{comicId}/events",
+      "segments": [
+        "/v1/public/",
+        "comics",
+        "{comicId}",
+        "events"
+      ],
+      "description": "Fetches lists of events filtered by a comic id.",
+      "query": {
+        "comicId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "series": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/comics/{comicId}/stories",
+      "segments": [
+        "/v1/public/",
+        "comics",
+        "{comicId}",
+        "stories"
+      ],
+      "description": "Fetches lists of stories filtered by a comic id.",
+      "query": {
+        "comicId": "Int",
+        "modifiedSince": "String",
+        "series": "Int",
+        "events": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/creators",
+      "segments": [
+        "/v1/public/",
+        "creators"
+      ],
+      "description": "Fetches lists of creators.",
+      "query": {
+        "firstName": "String",
+        "middleName": "String",
+        "lastName": "String",
+        "suffix": "String",
+        "nameStartsWith": "String",
+        "firstNameStartsWith": "String",
+        "middleNameStartsWith": "String",
+        "lastNameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CreatorDataContainer"
+    },
+    {
+      "path": "/v1/public/creators/{creatorId}",
+      "segments": [
+        "/v1/public/",
+        "creators",
+        "{creatorId}"
+      ],
+      "description": "Fetches a single creator by id.",
+      "query": {
+        "creatorId": "Int"
+      },
+      "type": "CreatorDataContainer"
+    },
+    {
+      "path": "/v1/public/creators/{creatorId}/comics",
+      "segments": [
+        "/v1/public/",
+        "creators",
+        "{creatorId}",
+        "comics"
+      ],
+      "description": "Fetches lists of comics filtered by a creator id.",
+      "query": {
+        "creatorId": "Int",
+        "format": "String",
+        "formatType": "String",
+        "noVariants": "Boolean",
+        "dateDescriptor": "String",
+        "dateRange": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "issueNumber": "Int",
+        "diamondCode": "String",
+        "digitalId": "Int",
+        "upc": "String",
+        "isbn": "String",
+        "ean": "String",
+        "issn": "String",
+        "hasDigitalIssue": "Boolean",
+        "modifiedSince": "String",
+        "characters": "Int",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "sharedAppearances": "Int",
+        "collaborators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/creators/{creatorId}/events",
+      "segments": [
+        "/v1/public/",
+        "creators",
+        "{creatorId}",
+        "events"
+      ],
+      "description": "Fetches lists of events filtered by a creator id.",
+      "query": {
+        "creatorId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "characters": "Int",
+        "series": "Int",
+        "comics": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/creators/{creatorId}/series",
+      "segments": [
+        "/v1/public/",
+        "creators",
+        "{creatorId}",
+        "series"
+      ],
+      "description": "Fetches lists of series filtered by a creator id.",
+      "query": {
+        "creatorId": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "stories": "Int",
+        "events": "Int",
+        "characters": "Int",
+        "seriesType": "String",
+        "contains": "String",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "SeriesDataContainer"
+    },
+    {
+      "path": "/v1/public/creators/{creatorId}/stories",
+      "segments": [
+        "/v1/public/",
+        "creators",
+        "{creatorId}",
+        "stories"
+      ],
+      "description": "Fetches lists of stories filtered by a creator id.",
+      "query": {
+        "creatorId": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "characters": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/events",
+      "segments": [
+        "/v1/public/",
+        "events"
+      ],
+      "description": "Fetches lists of events.",
+      "query": {
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "series": "Int",
+        "comics": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/events/{eventId}",
+      "segments": [
+        "/v1/public/",
+        "events",
+        "{eventId}"
+      ],
+      "description": "Fetches a single event by id.",
+      "query": {
+        "eventId": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/events/{eventId}/characters",
+      "segments": [
+        "/v1/public/",
+        "events",
+        "{eventId}",
+        "characters"
+      ],
+      "description": "Fetches lists of characters filtered by an event id.",
+      "query": {
+        "eventId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CharacterDataContainer"
+    },
+    {
+      "path": "/v1/public/events/{eventId}/comics",
+      "segments": [
+        "/v1/public/",
+        "events",
+        "{eventId}",
+        "comics"
+      ],
+      "description": "Fetches lists of comics filtered by an event id.",
+      "query": {
+        "eventId": "Int",
+        "format": "String",
+        "formatType": "String",
+        "noVariants": "Boolean",
+        "dateDescriptor": "String",
+        "dateRange": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "issueNumber": "Int",
+        "diamondCode": "String",
+        "digitalId": "Int",
+        "upc": "String",
+        "isbn": "String",
+        "ean": "String",
+        "issn": "String",
+        "hasDigitalIssue": "Boolean",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "series": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "sharedAppearances": "Int",
+        "collaborators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/events/{eventId}/creators",
+      "segments": [
+        "/v1/public/",
+        "events",
+        "{eventId}",
+        "creators"
+      ],
+      "description": "Fetches lists of creators filtered by an event id.",
+      "query": {
+        "eventId": "Int",
+        "firstName": "String",
+        "middleName": "String",
+        "lastName": "String",
+        "suffix": "String",
+        "nameStartsWith": "String",
+        "firstNameStartsWith": "String",
+        "middleNameStartsWith": "String",
+        "lastNameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CreatorDataContainer"
+    },
+    {
+      "path": "/v1/public/events/{eventId}/series",
+      "segments": [
+        "/v1/public/",
+        "events",
+        "{eventId}",
+        "series"
+      ],
+      "description": "Fetches lists of series filtered by an event id.",
+      "query": {
+        "eventId": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "stories": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "seriesType": "String",
+        "contains": "String",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "SeriesDataContainer"
+    },
+    {
+      "path": "/v1/public/events/{eventId}/stories",
+      "segments": [
+        "/v1/public/",
+        "events",
+        "{eventId}",
+        "stories"
+      ],
+      "description": "Fetches lists of stories filtered by an event id.",
+      "query": {
+        "eventId": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/series",
+      "segments": [
+        "/v1/public/",
+        "series"
+      ],
+      "description": "Fetches lists of series.",
+      "query": {
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "stories": "Int",
+        "events": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "seriesType": "String",
+        "contains": "String",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "SeriesDataContainer"
+    },
+    {
+      "path": "/v1/public/series/{seriesId}",
+      "segments": [
+        "/v1/public/",
+        "series",
+        "{seriesId}"
+      ],
+      "description": "Fetches a single comic series by id.",
+      "query": {
+        "seriesId": "Int"
+      },
+      "type": "SeriesDataContainer"
+    },
+    {
+      "path": "/v1/public/series/{seriesId}/characters",
+      "segments": [
+        "/v1/public/",
+        "series",
+        "{seriesId}",
+        "characters"
+      ],
+      "description": "Fetches lists of characters filtered by a series id.",
+      "query": {
+        "seriesId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CharacterDataContainer"
+    },
+    {
+      "path": "/v1/public/series/{seriesId}/comics",
+      "segments": [
+        "/v1/public/",
+        "series",
+        "{seriesId}",
+        "comics"
+      ],
+      "description": "Fetches lists of comics filtered by a series id.",
+      "query": {
+        "seriesId": "Int",
+        "format": "String",
+        "formatType": "String",
+        "noVariants": "Boolean",
+        "dateDescriptor": "String",
+        "dateRange": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "issueNumber": "Int",
+        "diamondCode": "String",
+        "digitalId": "Int",
+        "upc": "String",
+        "isbn": "String",
+        "ean": "String",
+        "issn": "String",
+        "hasDigitalIssue": "Boolean",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "sharedAppearances": "Int",
+        "collaborators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/series/{seriesId}/creators",
+      "segments": [
+        "/v1/public/",
+        "series",
+        "{seriesId}",
+        "creators"
+      ],
+      "description": "Fetches lists of creators filtered by a series id.",
+      "query": {
+        "seriesId": "Int",
+        "firstName": "String",
+        "middleName": "String",
+        "lastName": "String",
+        "suffix": "String",
+        "nameStartsWith": "String",
+        "firstNameStartsWith": "String",
+        "middleNameStartsWith": "String",
+        "lastNameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "events": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CreatorDataContainer"
+    },
+    {
+      "path": "/v1/public/series/{seriesId}/events",
+      "segments": [
+        "/v1/public/",
+        "series",
+        "{seriesId}",
+        "events"
+      ],
+      "description": "Fetches lists of events filtered by a series id.",
+      "query": {
+        "seriesId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "comics": "Int",
+        "stories": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/series/{seriesId}/stories",
+      "segments": [
+        "/v1/public/",
+        "series",
+        "{seriesId}",
+        "stories"
+      ],
+      "description": "Fetches lists of stories filtered by a series id.",
+      "query": {
+        "seriesId": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "events": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/stories",
+      "segments": [
+        "/v1/public/",
+        "stories"
+      ],
+      "description": "Fetches lists of stories.",
+      "query": {
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/stories/{storyId}",
+      "segments": [
+        "/v1/public/",
+        "stories",
+        "{storyId}"
+      ],
+      "description": "Fetches a single comic story by id.",
+      "query": {
+        "storyId": "Int"
+      },
+      "type": "StoryDataContainer"
+    },
+    {
+      "path": "/v1/public/stories/{storyId}/characters",
+      "segments": [
+        "/v1/public/",
+        "stories",
+        "{storyId}",
+        "characters"
+      ],
+      "description": "Fetches lists of characters filtered by a story id.",
+      "query": {
+        "storyId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CharacterDataContainer"
+    },
+    {
+      "path": "/v1/public/stories/{storyId}/comics",
+      "segments": [
+        "/v1/public/",
+        "stories",
+        "{storyId}",
+        "comics"
+      ],
+      "description": "Fetches lists of comics filtered by a story id.",
+      "query": {
+        "storyId": "Int",
+        "format": "String",
+        "formatType": "String",
+        "noVariants": "Boolean",
+        "dateDescriptor": "String",
+        "dateRange": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "issueNumber": "Int",
+        "diamondCode": "String",
+        "digitalId": "Int",
+        "upc": "String",
+        "isbn": "String",
+        "ean": "String",
+        "issn": "String",
+        "hasDigitalIssue": "Boolean",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "series": "Int",
+        "events": "Int",
+        "sharedAppearances": "Int",
+        "collaborators": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "ComicDataContainer"
+    },
+    {
+      "path": "/v1/public/stories/{storyId}/creators",
+      "segments": [
+        "/v1/public/",
+        "stories",
+        "{storyId}",
+        "creators"
+      ],
+      "description": "Fetches lists of creators filtered by a story id.",
+      "query": {
+        "storyId": "Int",
+        "firstName": "String",
+        "middleName": "String",
+        "lastName": "String",
+        "suffix": "String",
+        "nameStartsWith": "String",
+        "firstNameStartsWith": "String",
+        "middleNameStartsWith": "String",
+        "lastNameStartsWith": "String",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "series": "Int",
+        "events": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "CreatorDataContainer"
+    },
+    {
+      "path": "/v1/public/stories/{storyId}/events",
+      "segments": [
+        "/v1/public/",
+        "stories",
+        "{storyId}",
+        "events"
+      ],
+      "description": "Fetches lists of events filtered by a story id.",
+      "query": {
+        "storyId": "Int",
+        "name": "String",
+        "nameStartsWith": "String",
+        "modifiedSince": "String",
+        "creators": "Int",
+        "characters": "Int",
+        "series": "Int",
+        "comics": "Int",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "EventDataContainer"
+    },
+    {
+      "path": "/v1/public/stories/{storyId}/series",
+      "segments": [
+        "/v1/public/",
+        "stories",
+        "{storyId}",
+        "series"
+      ],
+      "description": "Fetches lists of series filtered by a story id.",
+      "query": {
+        "storyId": "Int",
+        "events": "Int",
+        "title": "String",
+        "titleStartsWith": "String",
+        "startYear": "Int",
+        "modifiedSince": "String",
+        "comics": "Int",
+        "creators": "Int",
+        "characters": "Int",
+        "seriesType": "String",
+        "contains": "String",
+        "orderBy": "String",
+        "limit": "Int",
+        "offset": "Int"
+      },
+      "type": "SeriesDataContainer"
+    }
+  ],
+  "tree": {
+    "characters": {
+      "singular": {
+        "path": "/v1/public/characters/{characterId}",
+        "segments": [
+          "/v1/public/",
+          "characters",
+          "{characterId}"
+        ],
+        "description": "Fetches a single character by id.",
+        "query": {
+          "characterId": "Int"
+        },
+        "type": "CharacterDataContainer"
+      },
+      "plural": {
+        "path": "/v1/public/characters",
+        "segments": [
+          "/v1/public/",
+          "characters"
+        ],
+        "description": "Fetches lists of characters.",
+        "query": {
+          "name": "String",
+          "nameStartsWith": "String",
+          "modifiedSince": "String",
+          "comics": "Int",
+          "series": "Int",
+          "events": "Int",
+          "stories": "Int",
+          "orderBy": "String",
+          "limit": "Int",
+          "offset": "Int"
+        },
+        "type": "CharacterDataContainer"
+      },
+      "children": {
+        "comics": {
+          "path": "/v1/public/characters/{characterId}/comics",
+          "segments": [
+            "/v1/public/",
+            "characters",
+            "{characterId}",
+            "comics"
+          ],
+          "description": "Fetches lists of comics filtered by a character id.",
+          "query": {
+            "characterId": "Int",
+            "format": "String",
+            "formatType": "String",
+            "noVariants": "Boolean",
+            "dateDescriptor": "String",
+            "dateRange": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "issueNumber": "Int",
+            "diamondCode": "String",
+            "digitalId": "Int",
+            "upc": "String",
+            "isbn": "String",
+            "ean": "String",
+            "issn": "String",
+            "hasDigitalIssue": "Boolean",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "series": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "sharedAppearances": "Int",
+            "collaborators": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "ComicDataContainer"
+        },
+        "events": {
+          "path": "/v1/public/characters/{characterId}/events",
+          "segments": [
+            "/v1/public/",
+            "characters",
+            "{characterId}",
+            "events"
+          ],
+          "description": "Fetches lists of events filtered by a character id.",
+          "query": {
+            "characterId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "series": "Int",
+            "comics": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "EventDataContainer"
+        },
+        "series": {
+          "path": "/v1/public/characters/{characterId}/series",
+          "segments": [
+            "/v1/public/",
+            "characters",
+            "{characterId}",
+            "series"
+          ],
+          "description": "Fetches lists of series filtered by a character id.",
+          "query": {
+            "characterId": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "stories": "Int",
+            "events": "Int",
+            "creators": "Int",
+            "seriesType": "String",
+            "contains": "String",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "SeriesDataContainer"
+        },
+        "stories": {
+          "path": "/v1/public/characters/{characterId}/stories",
+          "segments": [
+            "/v1/public/",
+            "characters",
+            "{characterId}",
+            "stories"
+          ],
+          "description": "Fetches lists of stories filtered by a character id.",
+          "query": {
+            "characterId": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "events": "Int",
+            "creators": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "StoryDataContainer"
+        }
+      }
+    },
+    "comics": {
+      "singular": {
+        "path": "/v1/public/comics/{comicId}",
+        "segments": [
+          "/v1/public/",
+          "comics",
+          "{comicId}"
+        ],
+        "description": "Fetches a single comic by id.",
+        "query": {
+          "comicId": "Int"
+        },
+        "type": "ComicDataContainer"
+      },
+      "plural": {
+        "path": "/v1/public/comics",
+        "segments": [
+          "/v1/public/",
+          "comics"
+        ],
+        "description": "Fetches lists of comics.",
+        "query": {
+          "format": "String",
+          "formatType": "String",
+          "noVariants": "Boolean",
+          "dateDescriptor": "String",
+          "dateRange": "Int",
+          "title": "String",
+          "titleStartsWith": "String",
+          "startYear": "Int",
+          "issueNumber": "Int",
+          "diamondCode": "String",
+          "digitalId": "Int",
+          "upc": "String",
+          "isbn": "String",
+          "ean": "String",
+          "issn": "String",
+          "hasDigitalIssue": "Boolean",
+          "modifiedSince": "String",
+          "creators": "Int",
+          "characters": "Int",
+          "series": "Int",
+          "events": "Int",
+          "stories": "Int",
+          "sharedAppearances": "Int",
+          "collaborators": "Int",
+          "orderBy": "String",
+          "limit": "Int",
+          "offset": "Int"
+        },
+        "type": "ComicDataContainer"
+      },
+      "children": {
+        "characters": {
+          "path": "/v1/public/comics/{comicId}/characters",
+          "segments": [
+            "/v1/public/",
+            "comics",
+            "{comicId}",
+            "characters"
+          ],
+          "description": "Fetches lists of characters filtered by a comic id.",
+          "query": {
+            "comicId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "series": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CharacterDataContainer"
+        },
+        "creators": {
+          "path": "/v1/public/comics/{comicId}/creators",
+          "segments": [
+            "/v1/public/",
+            "comics",
+            "{comicId}",
+            "creators"
+          ],
+          "description": "Fetches lists of creators filtered by a comic id.",
+          "query": {
+            "comicId": "Int",
+            "firstName": "String",
+            "middleName": "String",
+            "lastName": "String",
+            "suffix": "String",
+            "nameStartsWith": "String",
+            "firstNameStartsWith": "String",
+            "middleNameStartsWith": "String",
+            "lastNameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CreatorDataContainer"
+        },
+        "events": {
+          "path": "/v1/public/comics/{comicId}/events",
+          "segments": [
+            "/v1/public/",
+            "comics",
+            "{comicId}",
+            "events"
+          ],
+          "description": "Fetches lists of events filtered by a comic id.",
+          "query": {
+            "comicId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "characters": "Int",
+            "series": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "EventDataContainer"
+        },
+        "stories": {
+          "path": "/v1/public/comics/{comicId}/stories",
+          "segments": [
+            "/v1/public/",
+            "comics",
+            "{comicId}",
+            "stories"
+          ],
+          "description": "Fetches lists of stories filtered by a comic id.",
+          "query": {
+            "comicId": "Int",
+            "modifiedSince": "String",
+            "series": "Int",
+            "events": "Int",
+            "creators": "Int",
+            "characters": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "StoryDataContainer"
+        }
+      }
+    },
+    "creators": {
+      "singular": {
+        "path": "/v1/public/creators/{creatorId}",
+        "segments": [
+          "/v1/public/",
+          "creators",
+          "{creatorId}"
+        ],
+        "description": "Fetches a single creator by id.",
+        "query": {
+          "creatorId": "Int"
+        },
+        "type": "CreatorDataContainer"
+      },
+      "plural": {
+        "path": "/v1/public/creators",
+        "segments": [
+          "/v1/public/",
+          "creators"
+        ],
+        "description": "Fetches lists of creators.",
+        "query": {
+          "firstName": "String",
+          "middleName": "String",
+          "lastName": "String",
+          "suffix": "String",
+          "nameStartsWith": "String",
+          "firstNameStartsWith": "String",
+          "middleNameStartsWith": "String",
+          "lastNameStartsWith": "String",
+          "modifiedSince": "String",
+          "comics": "Int",
+          "series": "Int",
+          "events": "Int",
+          "stories": "Int",
+          "orderBy": "String",
+          "limit": "Int",
+          "offset": "Int"
+        },
+        "type": "CreatorDataContainer"
+      },
+      "children": {
+        "comics": {
+          "path": "/v1/public/creators/{creatorId}/comics",
+          "segments": [
+            "/v1/public/",
+            "creators",
+            "{creatorId}",
+            "comics"
+          ],
+          "description": "Fetches lists of comics filtered by a creator id.",
+          "query": {
+            "creatorId": "Int",
+            "format": "String",
+            "formatType": "String",
+            "noVariants": "Boolean",
+            "dateDescriptor": "String",
+            "dateRange": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "issueNumber": "Int",
+            "diamondCode": "String",
+            "digitalId": "Int",
+            "upc": "String",
+            "isbn": "String",
+            "ean": "String",
+            "issn": "String",
+            "hasDigitalIssue": "Boolean",
+            "modifiedSince": "String",
+            "characters": "Int",
+            "series": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "sharedAppearances": "Int",
+            "collaborators": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "ComicDataContainer"
+        },
+        "events": {
+          "path": "/v1/public/creators/{creatorId}/events",
+          "segments": [
+            "/v1/public/",
+            "creators",
+            "{creatorId}",
+            "events"
+          ],
+          "description": "Fetches lists of events filtered by a creator id.",
+          "query": {
+            "creatorId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "characters": "Int",
+            "series": "Int",
+            "comics": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "EventDataContainer"
+        },
+        "series": {
+          "path": "/v1/public/creators/{creatorId}/series",
+          "segments": [
+            "/v1/public/",
+            "creators",
+            "{creatorId}",
+            "series"
+          ],
+          "description": "Fetches lists of series filtered by a creator id.",
+          "query": {
+            "creatorId": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "stories": "Int",
+            "events": "Int",
+            "characters": "Int",
+            "seriesType": "String",
+            "contains": "String",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "SeriesDataContainer"
+        },
+        "stories": {
+          "path": "/v1/public/creators/{creatorId}/stories",
+          "segments": [
+            "/v1/public/",
+            "creators",
+            "{creatorId}",
+            "stories"
+          ],
+          "description": "Fetches lists of stories filtered by a creator id.",
+          "query": {
+            "creatorId": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "events": "Int",
+            "characters": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "StoryDataContainer"
+        }
+      }
+    },
+    "events": {
+      "singular": {
+        "path": "/v1/public/events/{eventId}",
+        "segments": [
+          "/v1/public/",
+          "events",
+          "{eventId}"
+        ],
+        "description": "Fetches a single event by id.",
+        "query": {
+          "eventId": "Int"
+        },
+        "type": "EventDataContainer"
+      },
+      "plural": {
+        "path": "/v1/public/events",
+        "segments": [
+          "/v1/public/",
+          "events"
+        ],
+        "description": "Fetches lists of events.",
+        "query": {
+          "name": "String",
+          "nameStartsWith": "String",
+          "modifiedSince": "String",
+          "creators": "Int",
+          "characters": "Int",
+          "series": "Int",
+          "comics": "Int",
+          "stories": "Int",
+          "orderBy": "String",
+          "limit": "Int",
+          "offset": "Int"
+        },
+        "type": "EventDataContainer"
+      },
+      "children": {
+        "characters": {
+          "path": "/v1/public/events/{eventId}/characters",
+          "segments": [
+            "/v1/public/",
+            "events",
+            "{eventId}",
+            "characters"
+          ],
+          "description": "Fetches lists of characters filtered by an event id.",
+          "query": {
+            "eventId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CharacterDataContainer"
+        },
+        "comics": {
+          "path": "/v1/public/events/{eventId}/comics",
+          "segments": [
+            "/v1/public/",
+            "events",
+            "{eventId}",
+            "comics"
+          ],
+          "description": "Fetches lists of comics filtered by an event id.",
+          "query": {
+            "eventId": "Int",
+            "format": "String",
+            "formatType": "String",
+            "noVariants": "Boolean",
+            "dateDescriptor": "String",
+            "dateRange": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "issueNumber": "Int",
+            "diamondCode": "String",
+            "digitalId": "Int",
+            "upc": "String",
+            "isbn": "String",
+            "ean": "String",
+            "issn": "String",
+            "hasDigitalIssue": "Boolean",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "characters": "Int",
+            "series": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "sharedAppearances": "Int",
+            "collaborators": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "ComicDataContainer"
+        },
+        "creators": {
+          "path": "/v1/public/events/{eventId}/creators",
+          "segments": [
+            "/v1/public/",
+            "events",
+            "{eventId}",
+            "creators"
+          ],
+          "description": "Fetches lists of creators filtered by an event id.",
+          "query": {
+            "eventId": "Int",
+            "firstName": "String",
+            "middleName": "String",
+            "lastName": "String",
+            "suffix": "String",
+            "nameStartsWith": "String",
+            "firstNameStartsWith": "String",
+            "middleNameStartsWith": "String",
+            "lastNameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CreatorDataContainer"
+        },
+        "series": {
+          "path": "/v1/public/events/{eventId}/series",
+          "segments": [
+            "/v1/public/",
+            "events",
+            "{eventId}",
+            "series"
+          ],
+          "description": "Fetches lists of series filtered by an event id.",
+          "query": {
+            "eventId": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "stories": "Int",
+            "creators": "Int",
+            "characters": "Int",
+            "seriesType": "String",
+            "contains": "String",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "SeriesDataContainer"
+        },
+        "stories": {
+          "path": "/v1/public/events/{eventId}/stories",
+          "segments": [
+            "/v1/public/",
+            "events",
+            "{eventId}",
+            "stories"
+          ],
+          "description": "Fetches lists of stories filtered by an event id.",
+          "query": {
+            "eventId": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "creators": "Int",
+            "characters": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "StoryDataContainer"
+        }
+      }
+    },
+    "series": {
+      "singular": {
+        "path": "/v1/public/series/{seriesId}",
+        "segments": [
+          "/v1/public/",
+          "series",
+          "{seriesId}"
+        ],
+        "description": "Fetches a single comic series by id.",
+        "query": {
+          "seriesId": "Int"
+        },
+        "type": "SeriesDataContainer"
+      },
+      "plural": {
+        "path": "/v1/public/series",
+        "segments": [
+          "/v1/public/",
+          "series"
+        ],
+        "description": "Fetches lists of series.",
+        "query": {
+          "title": "String",
+          "titleStartsWith": "String",
+          "startYear": "Int",
+          "modifiedSince": "String",
+          "comics": "Int",
+          "stories": "Int",
+          "events": "Int",
+          "creators": "Int",
+          "characters": "Int",
+          "seriesType": "String",
+          "contains": "String",
+          "orderBy": "String",
+          "limit": "Int",
+          "offset": "Int"
+        },
+        "type": "SeriesDataContainer"
+      },
+      "children": {
+        "characters": {
+          "path": "/v1/public/series/{seriesId}/characters",
+          "segments": [
+            "/v1/public/",
+            "series",
+            "{seriesId}",
+            "characters"
+          ],
+          "description": "Fetches lists of characters filtered by a series id.",
+          "query": {
+            "seriesId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CharacterDataContainer"
+        },
+        "comics": {
+          "path": "/v1/public/series/{seriesId}/comics",
+          "segments": [
+            "/v1/public/",
+            "series",
+            "{seriesId}",
+            "comics"
+          ],
+          "description": "Fetches lists of comics filtered by a series id.",
+          "query": {
+            "seriesId": "Int",
+            "format": "String",
+            "formatType": "String",
+            "noVariants": "Boolean",
+            "dateDescriptor": "String",
+            "dateRange": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "issueNumber": "Int",
+            "diamondCode": "String",
+            "digitalId": "Int",
+            "upc": "String",
+            "isbn": "String",
+            "ean": "String",
+            "issn": "String",
+            "hasDigitalIssue": "Boolean",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "characters": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "sharedAppearances": "Int",
+            "collaborators": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "ComicDataContainer"
+        },
+        "creators": {
+          "path": "/v1/public/series/{seriesId}/creators",
+          "segments": [
+            "/v1/public/",
+            "series",
+            "{seriesId}",
+            "creators"
+          ],
+          "description": "Fetches lists of creators filtered by a series id.",
+          "query": {
+            "seriesId": "Int",
+            "firstName": "String",
+            "middleName": "String",
+            "lastName": "String",
+            "suffix": "String",
+            "nameStartsWith": "String",
+            "firstNameStartsWith": "String",
+            "middleNameStartsWith": "String",
+            "lastNameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "events": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CreatorDataContainer"
+        },
+        "events": {
+          "path": "/v1/public/series/{seriesId}/events",
+          "segments": [
+            "/v1/public/",
+            "series",
+            "{seriesId}",
+            "events"
+          ],
+          "description": "Fetches lists of events filtered by a series id.",
+          "query": {
+            "seriesId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "characters": "Int",
+            "comics": "Int",
+            "stories": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "EventDataContainer"
+        },
+        "stories": {
+          "path": "/v1/public/series/{seriesId}/stories",
+          "segments": [
+            "/v1/public/",
+            "series",
+            "{seriesId}",
+            "stories"
+          ],
+          "description": "Fetches lists of stories filtered by a series id.",
+          "query": {
+            "seriesId": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "events": "Int",
+            "creators": "Int",
+            "characters": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "StoryDataContainer"
+        }
+      }
+    },
+    "stories": {
+      "singular": {
+        "path": "/v1/public/stories/{storyId}",
+        "segments": [
+          "/v1/public/",
+          "stories",
+          "{storyId}"
+        ],
+        "description": "Fetches a single comic story by id.",
+        "query": {
+          "storyId": "Int"
+        },
+        "type": "StoryDataContainer"
+      },
+      "plural": {
+        "path": "/v1/public/stories",
+        "segments": [
+          "/v1/public/",
+          "stories"
+        ],
+        "description": "Fetches lists of stories.",
+        "query": {
+          "modifiedSince": "String",
+          "comics": "Int",
+          "series": "Int",
+          "events": "Int",
+          "creators": "Int",
+          "characters": "Int",
+          "orderBy": "String",
+          "limit": "Int",
+          "offset": "Int"
+        },
+        "type": "StoryDataContainer"
+      },
+      "children": {
+        "characters": {
+          "path": "/v1/public/stories/{storyId}/characters",
+          "segments": [
+            "/v1/public/",
+            "stories",
+            "{storyId}",
+            "characters"
+          ],
+          "description": "Fetches lists of characters filtered by a story id.",
+          "query": {
+            "storyId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "events": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CharacterDataContainer"
+        },
+        "comics": {
+          "path": "/v1/public/stories/{storyId}/comics",
+          "segments": [
+            "/v1/public/",
+            "stories",
+            "{storyId}",
+            "comics"
+          ],
+          "description": "Fetches lists of comics filtered by a story id.",
+          "query": {
+            "storyId": "Int",
+            "format": "String",
+            "formatType": "String",
+            "noVariants": "Boolean",
+            "dateDescriptor": "String",
+            "dateRange": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "issueNumber": "Int",
+            "diamondCode": "String",
+            "digitalId": "Int",
+            "upc": "String",
+            "isbn": "String",
+            "ean": "String",
+            "issn": "String",
+            "hasDigitalIssue": "Boolean",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "characters": "Int",
+            "series": "Int",
+            "events": "Int",
+            "sharedAppearances": "Int",
+            "collaborators": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "ComicDataContainer"
+        },
+        "creators": {
+          "path": "/v1/public/stories/{storyId}/creators",
+          "segments": [
+            "/v1/public/",
+            "stories",
+            "{storyId}",
+            "creators"
+          ],
+          "description": "Fetches lists of creators filtered by a story id.",
+          "query": {
+            "storyId": "Int",
+            "firstName": "String",
+            "middleName": "String",
+            "lastName": "String",
+            "suffix": "String",
+            "nameStartsWith": "String",
+            "firstNameStartsWith": "String",
+            "middleNameStartsWith": "String",
+            "lastNameStartsWith": "String",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "series": "Int",
+            "events": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "CreatorDataContainer"
+        },
+        "events": {
+          "path": "/v1/public/stories/{storyId}/events",
+          "segments": [
+            "/v1/public/",
+            "stories",
+            "{storyId}",
+            "events"
+          ],
+          "description": "Fetches lists of events filtered by a story id.",
+          "query": {
+            "storyId": "Int",
+            "name": "String",
+            "nameStartsWith": "String",
+            "modifiedSince": "String",
+            "creators": "Int",
+            "characters": "Int",
+            "series": "Int",
+            "comics": "Int",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "EventDataContainer"
+        },
+        "series": {
+          "path": "/v1/public/stories/{storyId}/series",
+          "segments": [
+            "/v1/public/",
+            "stories",
+            "{storyId}",
+            "series"
+          ],
+          "description": "Fetches lists of series filtered by a story id.",
+          "query": {
+            "storyId": "Int",
+            "events": "Int",
+            "title": "String",
+            "titleStartsWith": "String",
+            "startYear": "Int",
+            "modifiedSince": "String",
+            "comics": "Int",
+            "creators": "Int",
+            "characters": "Int",
+            "seriesType": "String",
+            "contains": "String",
+            "orderBy": "String",
+            "limit": "Int",
+            "offset": "Int"
+          },
+          "type": "SeriesDataContainer"
+        }
+      }
+    }
+  }
+}

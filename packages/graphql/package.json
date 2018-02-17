@@ -1,0 +1,67 @@
+{
+  "name": "@marvel-challenge/graphql",
+  "version": "0.0.1",
+  "description": "GraphQL API for developer.marvel.com",
+  "main": "index.js",
+  "author": "bholloway",
+  "license": "MIT",
+  "private": true,
+  "prettier": {
+    "printWidth": 100,
+    "parser": "flow",
+    "singleQuote": true,
+    "bracketSpacing": false,
+    "arrowParens": "always",
+    "trailingComma": "none"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      }
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "dependencies": {
+    "chalk": "^2.3.1",
+    "change-case": "^3.0.1",
+    "common-path-prefix": "^1.0.0",
+    "compose-function": "^3.0.3",
+    "convict": "^4.0.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "express-blank-favicon": "^1.0.1",
+    "express-graphql": "^0.6.11",
+    "fetch-cached": "^2.0.3",
+    "graphql": "^0.13.1",
+    "graphql-tools": "^2.21.0",
+    "lru-cache": "^4.1.1",
+    "morgan": "^1.9.0",
+    "node-fetch": "^2.0.0"
+  },
+  "devDependencies": {
+    "deep-equal": "^1.0.1",
+    "eslint": "^4.17.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.10.2",
+    "supervisor": "^0.12.0",
+    "tap-diff": "^0.1.1",
+    "tape": "^4.8.0"
+  },
+  "scripts": {
+    "start": "node .",
+    "dev": "supervisor --watch package.json,index.js,lib .",
+    "docker": "cd ../../ && docker build -t marvel-challenge-graphql -f ./packages/graphql/Dockerfile .",
+    "lint": "eslint .",
+    "prettier": "prettier 'lib/**/*.js' --write",
+    "test": "tape 'lib/**/*.test.js' | tap-diff",
+    "doc": "node lib/config"
+  }
+}

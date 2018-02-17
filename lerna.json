@@ -1,0 +1,6 @@
+{
+  "name": "marvel-challenge",
+  "lerna": "2.9.0",
+  "npmClient": "yarn",
+  "useWorkspaces": true
+}
