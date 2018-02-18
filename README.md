@@ -41,14 +41,13 @@ And then for the project directory:
 
 ```sh
 yarn install
-yarn lerna bootstrap
+yarn bootstrap
 ```
 
-The "bootstrap" command installs node modules for each package and
-establishes symbolic links between packages.
-
-Per the yarn "workspace" feature these node modules are actually
-installed in the project root.
+The "bootstrap" script invokes `lerna bootstrap`. It installs node
+modules for each package and establishes symbolic links between
+packages. Per the yarn "workspace" feature these node modules are
+actually installed in the project root.
 
 Each package has its own scripts that may be **run in bulk** by Lerna.
 
@@ -61,8 +60,10 @@ a short-form script in the project root.
 | install node modules    | `yarn install && yarn bootstrap` |
 | run unit tests          | `yarn test`                      |
 | run code formatter      | `yarn prettier`                  |
-| start microservices     | `yarn start`                     |
 | build docker containers | `yarn docker`                    |
+
+It is advisable to `start` microservices separately from within their
+`/package` folders. See below.
 
 ## Microservices
 
@@ -85,16 +86,20 @@ First build the container
 yarn docker
 ```
 
-The run the container
+Then run the container
 
 ```sh
-docker run -p 3000:3000 -e "MARVEL_PUBLIC_KEY=<hexadecimal>" -e "MARVEL_PRIVATE_KEY=<hexadecimal>" marvel-challenge-graphql
+docker run -i -t -p 3000:3000 -e "MARVEL_PUBLIC_KEY=<hexadecimal>" -e "MARVEL_PRIVATE_KEY=<hexadecimal>" marvel-challenge-graphql
 ```
 
 #### Web Console
 
-This will run the server as well as
-[GraphiQL](https://medium.com/the-graphqlhub/graphiql-graphql-s-killer-app-9896242b2125) console.
+When in development mode, there is a
+[GraphiQL](https://medium.com/the-graphqlhub/graphiql-graphql-s-killer-app-9896242b2125)
+console on (by default) [http://localhost:3000](http://localhost:3000/).
+
+You can view the entire scraped schema by using the "docs" feature (top
+right of screen).
 
 Using the console try
 [this query](http://localhost:3000/?query=%7B%0A%20%20characters(name%3A%20%22hulk%22)%20%7B%0A%20%20%20%20results%20%7B%0A%20%20%20%20%20%20id%0A%20%20%20%20%20%20name%0A%20%20%20%20%20%20comics(limit%3A%203)%20%7B%0A%20%20%20%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20stories(limit%3A%203)%20%7B%0A%20%20%20%20%20%20%20%20results%20%7B%0A%20%20%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20comics(limit%3A%203%2C%20characters%3A%201009351)%20%7B%0A%20%20%20%20results%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20stories(limit%3A%203%2C%20characters%3A%201009351)%20%7B%0A%20%20%20%20results%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A).
@@ -165,7 +170,10 @@ and `comics`with the hulk's `id`.
 - [x] Scrape `developer.marvel.com` for schema
 - [x] Unit tests for scraped schema
 - [x] GraphQL server based on scraped schema
-- [ ] Unit tests for fetch higher-order-functions
+- [x] GraphiQL console for the server
+- [ ] Unit tests for the higher-order-functions used with fetch
+- [ ] Build container in production mode and confirm there is not bloat
+      from other monorepo packages.
 - [ ] End-to-end tests for GraphQL server
 - [ ] Cloud CI
 - [ ] Add datadog (statsd) metrics

@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lerna": "lerna",
-    "bootstrap": "yarn lerna run bootstrap",
+    "bootstrap": "yarn lerna bootstrap",
     "start": "yarn lerna run start",
     "prettier": "yarn lerna run prettier",
     "test": "yarn lerna run test",
